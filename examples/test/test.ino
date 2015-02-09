@@ -1,3 +1,23 @@
+//---------------------------------------------------------
+/*
+
+test.ino
+
+Program for writing to Newhaven Display Slim OLEDs based on US2006 controller.
+
+Pick one up today in the Newhaven Display shop!
+------> http://www.newhavendisplay.com/oled-slim-character-oleds-c-119_825.html
+
+This code is written for the Arduino Mega.
+
+Copyright (c) 2015 - Newhaven Display International, LLC.
+
+Newhaven Display invests time and resources providing this open source code,
+please support Newhaven Display by purchasing products from Newhaven Display!
+
+*/
+//---------------------------------------------------------
+
 #include <SPI.h>
 #include <Arduino.h>
 #include <Wire.h>
