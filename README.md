@@ -1,8 +1,8 @@
-# NHD_US2006-Arduino-Mega
+# NHD_US2066-Arduino-Mega
 
 ==============================================
  
-This is a library for our Monochrome OLEDs based on US2006 controller.
+This is a library for our Monochrome OLEDs based on US2066 controller.
  
  Pick one up today in the Newhaven Display shop!
  
@@ -10,8 +10,8 @@ This is a library for our Monochrome OLEDs based on US2006 controller.
  
 This code is written for the Arduino Mega.
  
-To download. click the DOWNLOADS button in the top right corner, rename the uncompressed folder NHD_US2006. Check that the NHD_US2006 folder contains NHD_US2006.cpp and NHD_US2006.h
+To download. click the DOWNLOADS button in the top right corner, rename the uncompressed folder NHD_US2066. Check that the NHD_US2066 folder contains NHD_US2066.cpp and NHD_US2066.h
 
-Place the NHD_US2006 library folder in your /libraries/ folder. You may need to create the libraries subfolder if its your first library. Restart the IDE.
+Place the NHD_US2066 library folder in your /libraries/ folder. You may need to create the libraries subfolder if its your first library. Restart the IDE.
 
  
