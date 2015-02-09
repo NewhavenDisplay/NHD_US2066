@@ -1,4 +1,4 @@
-#include "NHD_US2006.h"
+#include "NHD_US2066.h"
 
 #define SERIAL_DELAY    0
 

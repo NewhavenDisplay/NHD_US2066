@@ -3,7 +3,7 @@
 
 test.ino
 
-Program for writing to Newhaven Display Slim OLEDs based on US2006 controller.
+Program for writing to Newhaven Display Slim OLEDs based on US2066 controller.
 
 Pick one up today in the Newhaven Display shop!
 ------> http://www.newhavendisplay.com/oled-slim-character-oleds-c-119_825.html
@@ -23,7 +23,7 @@ please support Newhaven Display by purchasing products from Newhaven Display!
 #include <Wire.h>
 #include <avr\io.h>
 
-#include "NHD_US2006.h"
+#include "NHD_US2066.h"
 unsigned char text1[] = {" Please Support "};
 unsigned char text2[] = {"  Open-Source   "};
 unsigned char text3[] = {"   Hardware &   "};
