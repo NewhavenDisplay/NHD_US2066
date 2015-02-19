@@ -36,23 +36,23 @@ void output()
 
         command(0x01);
         delay(2);
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(text1[i]);
         }
         
         command(0xA0);
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(text2[i]);
         }
 delay(2000);
 	command(0x01);
         delay(2);
-	for (i=0;i<20;i++){
+	for (i=0;i<16;i++){
 		data(text3[i]);
 	}
 	
 	command(0xA0);
-	for (i=0;i<20;i++){
+	for (i=0;i<16;i++){
 		data(text4[i]);
 	}
 }
@@ -66,24 +66,24 @@ void outputTest()
         data('N');
         while(1);
         
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(text1[i]);
         }
         
         command(0xA0);
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(text2[i]);
         }
         delay(2000);
 
 	command(0x01);
         delay(2);
-	for (i=0;i<20;i++){
+	for (i=0;i<16;i++){
 		data(text3[i]);
 	}
 	
 	command(0xA0);
-	for (i=0;i<20;i++){
+	for (i=0;i<16;i++){
 		data(text4[i]);
 	}
 }
@@ -95,12 +95,12 @@ void blocks()
         command(0x01);
         delay(2);
 
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(0x1F);
         }
 
         command(0xA0);
-        for(i=0;i<20;i++){
+        for(i=0;i<16;i++){
           data(0x1F);
         }
 }
