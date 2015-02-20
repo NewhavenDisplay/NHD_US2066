@@ -2,7 +2,7 @@
 
 ==============================================
  
-This is a library for our Monochrome OLEDs based on US2066 controller.
+This is a library for our Slim Monochrome OLEDs based on US2066 controller.
  
  Pick one up today in the Newhaven Display shop!
  
