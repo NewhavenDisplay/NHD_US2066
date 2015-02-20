@@ -30,7 +30,7 @@ unsigned char text3[] = {"Hardware & Software!"};
 unsigned char text4[] = {"--------------------"};
 
 unsigned char text5[] = {"  Newhaven Display  "};
-unsigned char text6[] = {"4x20 Character OLED "};
+unsigned char text6[] = {"4x20  Character OLED"};
 unsigned char text7[] = {"    Slim  Design    "};
 
 
