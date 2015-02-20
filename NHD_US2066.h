@@ -16,7 +16,9 @@
 #define SDIN   51
 #define SDOUT  50
 
-void init16x2();
+// R/W signal tied LOW (always write)
+
+void init_oled();
 void send_packet(unsigned char x);
 void data(unsigned char d);
 void command(unsigned char c);

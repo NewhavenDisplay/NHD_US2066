@@ -3,7 +3,7 @@
 #define SERIAL_DELAY    0
 
 const char slave2w = 0x3C;  //3C or 78
-unsigned char mode = 2; // 0 = 8-bit parallel 6800 mode; 1 = i2c mode; 2 = SPI mode;
+unsigned char mode = 0; // 0 = 8-bit parallel 6800 mode; 1 = i2c mode; 2 = SPI mode;
 unsigned char tx_packet[]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 
 void command(unsigned char c)
@@ -206,7 +206,7 @@ void send_packet(unsigned char x)
   Wire.endTransmission();
 }
 
-void init16x2()
+void init_oled()
 {
   pinMode(ASCL, OUTPUT);      //set Arduino I2C lines as outputs
   pinMode(ASDA, OUTPUT);      //
@@ -243,7 +243,7 @@ void init16x2()
 	command(0x2A);  //function set (extended command set)
 	command(0x79);  //OLED command set enabled
 	command(0xDA);  //set SEG pins hardware configuration
-	command(0x00);  //set SEG pins hardware configuration
+	command(0x10);  //set SEG pins ... NOTE: When using NHD-0216AW-XB3 or NHD_0216MW_XB3 change to (0x00)
 	command(0xDC);  //function selection C
 	command(0x00);  //function selection C
 	command(0x81);  //set contrast control

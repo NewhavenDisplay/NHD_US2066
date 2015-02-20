@@ -1,7 +1,7 @@
 //---------------------------------------------------------
 /*
 
-test.ino
+NHD_0216AW_XB3.ino
 
 Program for writing to Newhaven Display Slim OLEDs based on US2066 controller.
 
@@ -29,6 +29,12 @@ unsigned char text2[] = {"  Open-Source   "};
 unsigned char text3[] = {"   Hardware &   "};
 unsigned char text4[] = {"   Software !!  "};
 
+unsigned char text5[] = {"Newhaven Display"};
+unsigned char text6[] = {" 2X16 Character "};
+unsigned char text7[] = {"  Slim  Design  "};
+unsigned char text8[] = {"----------------"};
+
+
 
 void output()
 {
@@ -44,48 +50,46 @@ void output()
         for(i=0;i<16;i++){
           data(text2[i]);
         }
-delay(2000);
-	command(0x01);
-        delay(2);
-	for (i=0;i<16;i++){
-		data(text3[i]);
-	}
-	
-	command(0xA0);
-	for (i=0;i<16;i++){
-		data(text4[i]);
-	}
-}
 
-void outputTest()
-{
-	int i;
+        delay(2000);
 
         command(0x01);
         delay(2);
-        data('N');
-        while(1);
+        for (i=0;i<16;i++){
+		data(text3[i]);
+        }
+	
+        command(0xA0);
+        for (i=0;i<16;i++){
+		data(text4[i]);
+        }
+
+        delay(3500);
         
+        command(0x01);
+        delay(2);
         for(i=0;i<16;i++){
-          data(text1[i]);
+          data(text5[i]);
         }
         
         command(0xA0);
         for(i=0;i<16;i++){
-          data(text2[i]);
+          data(text6[i]);
         }
+
         delay(2000);
 
-	command(0x01);
+        command(0x01);
         delay(2);
-	for (i=0;i<16;i++){
-		data(text3[i]);
-	}
+        for (i=0;i<16;i++){
+		data(text7[i]);
+        }
 	
-	command(0xA0);
-	for (i=0;i<16;i++){
-		data(text4[i]);
-	}
+        command(0xA0);
+        for (i=0;i<16;i++){
+		data(text8[i]);
+        }
+
 }
 
 void blocks()
@@ -107,7 +111,7 @@ void blocks()
 
 void setup()
 {
-init16x2();
+init_oled();
 }
 
 void loop() 
@@ -116,7 +120,6 @@ void loop()
   {
     output();
     //blocks();
-    //outputTest();
     delay(2000);
   }
 }
