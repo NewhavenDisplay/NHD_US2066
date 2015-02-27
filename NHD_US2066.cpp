@@ -1,6 +1,5 @@
 #include "NHD_US2066.h"
 
-#define SERIAL_DELAY    0
 
 const char slave2w = 0x3C;  //3C or 78
 unsigned char mode = 0; // 0 = 8-bit parallel 6800 mode; 1 = i2c mode; 2 = SPI mode;
@@ -28,7 +27,6 @@ void command(unsigned char c)
               for(i=0;i<8;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((temp&0x80)>>7==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -38,15 +36,12 @@ void command(unsigned char c)
                   digitalWrite(SDIN, LOW);
                 }
                 temp = temp << 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
   
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((c&0x01)==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -56,23 +51,17 @@ void command(unsigned char c)
                   digitalWrite(SDIN, LOW);
                 }
                 c = c >> 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SDIN, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((c&0x01)==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -82,18 +71,13 @@ void command(unsigned char c)
                   digitalWrite(SDIN, LOW);
                 }
                 c = c >> 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SDIN, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               break;
   }
@@ -121,7 +105,6 @@ void data(unsigned char d)
               for(i=0;i<8;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((temp&0x80)>>7==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -131,15 +114,12 @@ void data(unsigned char d)
                   digitalWrite(SDIN, LOW);
                 }
                 temp = temp << 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
   
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((d&0x01)==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -149,23 +129,17 @@ void data(unsigned char d)
                   digitalWrite(SDIN, LOW);
                 }
                 d = d >> 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SDIN, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 if((d&0x01)==1)
                 {
                   digitalWrite(SDIN, HIGH);
@@ -175,18 +149,13 @@ void data(unsigned char d)
                   digitalWrite(SDIN, LOW);
                 }
                 d = d >> 1;
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               for(i=0;i<4;i++)
               {
                 digitalWrite(SCLK, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SDIN, LOW);
-                delay(SERIAL_DELAY);
                 digitalWrite(SCLK, HIGH);
-                delay(SERIAL_DELAY);
               }
               delay(10);
               break;
