@@ -17,6 +17,7 @@
 #define SDOUT  50
 
 // R/W signal tied LOW (always write)
+// SA0 signal tied LOW
 
 void init_oled();
 void send_packet(unsigned char x);
