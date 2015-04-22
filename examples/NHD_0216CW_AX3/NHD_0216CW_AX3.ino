@@ -10,7 +10,7 @@ Pick one up today in the Newhaven Display shop!
 
 This code is written for the Arduino Mega.
 
-Copyright (c) 2015 - Newhaven Display International, LLC.
+Copyright (c) 2015 - Newhaven Display International, Inc.
 
 Newhaven Display invests time and resources providing this open source code,
 please support Newhaven Display by purchasing products from Newhaven Display!
