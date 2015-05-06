@@ -2,8 +2,6 @@
 #include "Arduino.h"
 #include "SPI.h"
 
-
-
 #define RS   30
 #define E    31
 #define RES  32
