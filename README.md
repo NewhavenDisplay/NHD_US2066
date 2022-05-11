@@ -8,8 +8,8 @@ This is a library for our Slim Monochrome OLEDs based on `US2066` controller.
  
 This code is written for the `Arduino Mega`.
 
-# Library Download and Installation
-1. To download. Click the DOWNLOADS button in the top right corner.
+## Library Download and Installation
+1. To download. Click on `Code -> Download ZIP` in the top right corner.
 2. Rename the uncompressed folder `NHD_US2066`. 
 3. Check that the `NHD_US2066` folder contains `NHD_US2066.cpp` and `NHD_US2066.h`
 4. Place the `NHD_US2066` library folder in your `/libraries/` folder. You may need to create the libraries subfolder if its your first library. 
